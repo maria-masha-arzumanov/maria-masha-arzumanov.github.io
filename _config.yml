@@ -32,16 +32,6 @@ author:
   avatar: "Headshot.JPG" 
   googlescholar: "https://scholar.google.com/citations?user=YOUR_ID"
   orcid: "https://orcid.org/YOUR_ORCID"
-  avatar: "profile.png"  # <-- Add your picture file name here
-
-# Navigation menu
-_data/navigation.yml:
-- title: About
-  url: /about/
-- title: CV
-  url: /files/cv.pdf
-- title: Research
-  url: /research/
 
 # Collections - only publications if you want
 collections: []
@@ -72,22 +62,7 @@ keep_files:
 sass:
   style: compressed
 
-
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
 # HTML Compression
-# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
