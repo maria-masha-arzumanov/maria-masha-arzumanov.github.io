@@ -1,0 +1,23 @@
+/* Light blue background, dark blue sidebar */
+:root {
+  --primary-color: #1a237e;       /* Dark blue (sidebar) */
+  --bg-color: #e3f2fd;            /* Light blue background */
+  --link-color: #0d47a1;          /* Dark blue links */
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+  color: white;  /* Sidebar text in white */
+}
+
+.sidebar a {
+  color: white; /* Links in sidebar */
+}
+
+a {
+  color: var(--link-color); /* Links in main content */
+}
