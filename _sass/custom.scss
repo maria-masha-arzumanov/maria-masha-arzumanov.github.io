@@ -1,76 +1,107 @@
-/* --- Color palette (edit these) --- */
+/* ===============================
+   Color palette (soft academic blue)
+   =============================== */
 :root {
-  --page-bg: #eaf4ff;     /* light blue for entire site */
-  --sidebar-bg: #4f6fbf;  /* slightly darker blue sidebar */
+  --page-bg: #eef6ff;     /* very soft light blue */
+  --sidebar-bg: #7d92cc;  /* softened, muted blue */
   --text: #1f2937;
-  --link: #0b4aa2;
+  --link: #1a4fb3;
 }
 
 /* Make the whole page light blue */
 html, body {
   background: var(--page-bg);
+  overflow-x: hidden;
 }
 
 body {
   color: var(--text);
 }
 
-/* Hide the top navigation bar (so it looks like Catarina’s layout) */
+/* Hide top navigation (sidebar-only layout) */
 .masthead {
   display: none;
 }
 
-/* The main content wrapper in Minimal Mistakes / AcademicPages */
+/* Main content wrapper */
 .initial-content {
   background: var(--page-bg);
   padding-top: 2rem;
 }
 
-/* Make the left sidebar a fixed full-height panel */
+/* ===============================
+   Fixed left sidebar
+   =============================== */
 .sidebar {
-  background: var(--sidebar-bg);
-  color: white;
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;     /* adjust if you want wider/narrower */
+  width: 280px;
   height: 100vh;
+
+  margin: 0 !important;
+  padding: 1.5rem 1rem;
+
+  background: var(--sidebar-bg);
+  color: white;
   overflow-y: auto;
-  padding-top: 1.5rem;
+  z-index: 1000;
 }
 
-/* Push the main content to the right so it doesn't sit under the sidebar */
-.page {
-  margin-left: 280px;  /* must match sidebar width */
+/* Push main content right of sidebar */
+.page,
+.initial-content {
+  margin-left: 280px;
+  background: var(--page-bg);
 }
 
-/* Sidebar links */
+/* Sidebar text and links */
+.sidebar,
+.sidebar p,
+.sidebar li {
+  color: rgba(255,255,255,0.95);
+}
+
 .sidebar a {
   color: rgba(255,255,255,0.95);
   text-decoration: none;
 }
+
 .sidebar a:hover {
   text-decoration: underline;
 }
 
-/* Main-content links */
+/* Main content links */
 .page__content a {
   color: var(--link);
 }
 
-/* Avatar: force a true circle AND show the image */
+/* ===============================
+   Avatar (bigger, cleaner, uncropped)
+   =============================== */
 .author__avatar {
-  width: 230px;
-  height: 230px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 1rem auto;
-  border: 3px solid rgba(255,255,255,0.7);
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+
+  border: 2px solid rgba(255,255,255,0.7);
 }
 
 .author__avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%; /* shift image down to avoid head crop */
   display: block;
 }
+
+/* Optional: tighten name spacing */
+.author__name {
+  margin-top: 0.75rem;
+}
+
