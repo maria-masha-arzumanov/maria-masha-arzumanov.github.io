@@ -166,3 +166,48 @@ body {
   }
 }
 
+/* ===== Fix weird avatar rings / outlines ===== */
+/* Kill any theme-added pseudo-element rings */
+.author__avatar::before,
+.author__avatar::after,
+.author__avatar img::before,
+.author__avatar img::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Ensure only ONE border exists (the wrapper), and the image has none */
+.author__avatar {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.author__avatar img {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== Remove footer (Sitemap gray block) ===== */
+.page__footer,
+footer,
+.footer {
+  display: none !important;
+}
+
+/* ===== Move About content left (less centered) ===== */
+.page__inner-wrap {
+  max-width: none !important;     /* stop centering constraints */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.page__content,
+.page__title {
+  text-align: left !important;
+}
+
+/* Reduce the left padding so content sits closer to the sidebar */
+.page {
+  padding-left: 2rem !important;  /* try 1.5rem if you want even closer */
+}
