@@ -1,51 +1,76 @@
-/* Split layout: light blue content, darker blue sidebar */
+/* --- Color palette (edit these) --- */
 :root {
-  --sidebar-color: #3949ab;   /* slightly darker blue for sidebar */
-  --bg-color: #e3f2fd;        /* light blue for main content */
-  --link-color: #0d47a1;      /* dark blue links */
+  --page-bg: #eaf4ff;     /* light blue for entire site */
+  --sidebar-bg: #4f6fbf;  /* slightly darker blue sidebar */
+  --text: #1f2937;
+  --link: #0b4aa2;
+}
+
+/* Make the whole page light blue */
+html, body {
+  background: var(--page-bg);
 }
 
 body {
-  background-color: var(--bg-color);
+  color: var(--text);
 }
 
-/* Sidebar styling */
+/* Hide the top navigation bar (so it looks like Catarina’s layout) */
+.masthead {
+  display: none;
+}
+
+/* The main content wrapper in Minimal Mistakes / AcademicPages */
+.initial-content {
+  background: var(--page-bg);
+  padding-top: 2rem;
+}
+
+/* Make the left sidebar a fixed full-height panel */
 .sidebar {
-  background-color: var(--sidebar-color);
-  color: white; /* sidebar text in white */
-  min-height: 100vh; /* make sidebar fill the height of the page */
-  position: fixed;   /* fix sidebar on left */
+  background: var(--sidebar-bg);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;     /* adjust if you want wider/narrower */
+  height: 100vh;
+  overflow-y: auto;
+  padding-top: 1.5rem;
+}
+
+/* Push the main content to the right so it doesn't sit under the sidebar */
+.page {
+  margin-left: 280px;  /* must match sidebar width */
 }
 
 /* Sidebar links */
 .sidebar a {
-  color: white;
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+}
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
-/* Main content area */
-.content {
-  margin-left: 220px;  /* leave space for sidebar width */
-  padding: 2rem;
-  background-color: var(--bg-color);
+/* Main-content links */
+.page__content a {
+  color: var(--link);
 }
 
-/* Links in main content */
-a {
-  color: var(--link-color);
-}
-
-/* Circular avatar */
+/* Avatar: force a true circle AND show the image */
 .author__avatar {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  border: 3px solid rgba(255,255,255,0.7);
 }
 
 .author__avatar img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
+  display: block;
 }
