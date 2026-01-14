@@ -247,3 +247,18 @@ footer {
 .page__content {
   text-align: left !important;
 }
+
+/* Kill any theme ring/border on avatar links/images */
+.author__avatar a,
+.author__avatar a img {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.author__avatar a::before,
+.author__avatar a::after {
+  content: none !important;
+  display: none !important;
+}
+
