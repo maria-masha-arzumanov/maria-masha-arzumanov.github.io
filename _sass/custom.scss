@@ -93,12 +93,11 @@ body {
 }
 
 .author__avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%; /* shift image down to avoid head crop */
-  display: block;
+  max-width: none !important;
+  width: 100% !important;
+  height: 100% !important;
 }
+
 
 /* Optional: tighten name spacing */
 .author__name {
