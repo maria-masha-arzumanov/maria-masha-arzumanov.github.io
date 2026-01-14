@@ -1,37 +1,51 @@
-/* Light blue background, dark blue sidebar */
+/* Split layout: light blue content, darker blue sidebar */
 :root {
-  --primary-color: #1a237e;
-  --bg-color: #e3f2fd;
-  --link-color: #0d47a1;
+  --sidebar-color: #3949ab;   /* slightly darker blue for sidebar */
+  --bg-color: #e3f2fd;        /* light blue for main content */
+  --link-color: #0d47a1;      /* dark blue links */
 }
 
 body {
   background-color: var(--bg-color);
 }
 
+/* Sidebar styling */
 .sidebar {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--sidebar-color);
+  color: white; /* sidebar text in white */
+  min-height: 100vh; /* make sidebar fill the height of the page */
+  position: fixed;   /* fix sidebar on left */
 }
 
+/* Sidebar links */
 .sidebar a {
   color: white;
 }
 
+/* Main content area */
+.content {
+  margin-left: 220px;  /* leave space for sidebar width */
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+/* Links in main content */
 a {
   color: var(--link-color);
 }
 
+/* Circular avatar */
 .author__avatar {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .author__avatar img {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
