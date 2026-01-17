@@ -34,7 +34,10 @@ author:
   email: "mnarzumanov@g.ucla.edu"
   github: "maria-masha-arzumanov"
   avatar: "/images/headshot.jpg"
-  googlescholar: "https://scholar.google.com/citations?user=YOUR_ID"
+  links:
+    - label: "Home"
+      icon: "fas fa-home"
+      url: "/"
 
 # Collections - only publications if you want
 collections: []
