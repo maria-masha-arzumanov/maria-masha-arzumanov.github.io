@@ -276,3 +276,18 @@ footer {
   display: none !important;
 }
 
+:root { --sidebar-width: 360px; } /* pick your width */
+
+/* force sidebar width */
+.sidebar,
+.sidebar.sticky {
+  width: var(--sidebar-width) !important;
+}
+
+/* force content offset */
+#main,
+.page,
+.initial-content {
+  margin-left: var(--sidebar-width) !important;
+}
+
