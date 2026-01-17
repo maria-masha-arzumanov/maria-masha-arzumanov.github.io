@@ -6,13 +6,10 @@ author_profile: true
 ---
 
 ## Working Papers
-- *Title of paper* — short description (coming soon)
+- **Abortion Restrictions and Electoral Turnout: The Effect of Dobbs v. Jackson on Women’s
+Voting**
+- **Women Leaders and the Gender Pay Gap in Municipal Governmen.** _(with Julia Payson)_
+- Green Gold and Gendered Political Corruption: The Effect of Agricultural Revenue Shocks on
+Bureaucratic Competence
 
-## Research Interests
-- Political economy
-- Women in politics
-- Reproductive rights
-- Causal inference
 
-## Projects
-Brief descriptions of ongoing work.
